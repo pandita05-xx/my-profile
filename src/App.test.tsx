@@ -10,5 +10,5 @@ describe('App', () => {
 
 it('menampilkan nama profil', () => {
   render(<App />)
-  expect(screen.getByText('Nama Kamu')).toBeInTheDocument()
+  expect(screen.getByText('PriestPw')).toBeInTheDocument()
 })

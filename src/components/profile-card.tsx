@@ -4,14 +4,15 @@ interface ProfileCardProps {
   skills: string[]
   avatarUrl: string
   githubUrl: string
+  location: string
 }
 
 import { formatBio } from '../utils/format-bio'
-import { GitHubIcon } from './icons'
+import { MapPinIcon, GitHubIcon } from './icons'
 
 export { SunIcon, MoonIcon } from './icons'
 
-export function ProfileCard({ name, bio, skills, avatarUrl, githubUrl }: ProfileCardProps) {
+export function ProfileCard({ name, bio, skills, avatarUrl, githubUrl, location }: ProfileCardProps) {
   return (
     <div className="profile-card">
       <div className="profile-card-header" />
@@ -21,6 +22,10 @@ export function ProfileCard({ name, bio, skills, avatarUrl, githubUrl }: Profile
           <span className="avatar-status" />
         </div>
         <h1 className="name">{name}</h1>
+        <p className="location">
+          <MapPinIcon />
+          {location}
+        </p>
         <p className="bio">{formatBio(bio)}</p>
         <div className="divider" />
         <p className="skills-label">Keahlian</p>

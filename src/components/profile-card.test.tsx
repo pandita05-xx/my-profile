@@ -3,11 +3,11 @@ import '@testing-library/jest-dom'
 import { ProfileCard } from './profile-card'
 
 const defaultProps = {
-  name: 'Budi',
+  name: 'PriestPw',
   bio: 'Mahasiswa yang suka ngoding',
   skills: ['React', 'Node'],
   avatarUrl: 'https://example.com/avatar.png',
-  githubUrl: 'https://github.com/budi',
+  githubUrl: 'https://github.com/pandita05-xx',
   location: 'Malang, Jawa Timur',
 }
 
@@ -16,7 +16,7 @@ describe('ProfileCard', () => {
     render(<ProfileCard {...defaultProps} />)
     const link = screen.getByRole('link')
     expect(link).toBeInTheDocument()
-    expect(link).toHaveAttribute('href', 'https://github.com/budi')
+    expect(link).toHaveAttribute('href', 'https://github.com/pandita05-xx')
   })
 
   it('merender lokasi', () => {
